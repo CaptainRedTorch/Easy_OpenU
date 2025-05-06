@@ -1,0 +1,101 @@
+:root {
+    font-family: "Segoe UI",Arial, sans-serif;
+    --button-background: #c8dcff;
+    --button-background-light: #e5eeff;
+    --button-background-hover: #bed1f6;
+    --button-background-active: #abc0f5;
+    --button-background-active-darker: #9eb5f3;
+    --text-color: #2c6bea;
+    --text-color-darker: #0e4fcb;
+}
+
+.body{
+    width: 400px;
+}
+
+.labels{
+    background-color: var(--button-background);
+    border-radius: 2vh;
+    text-align: center;
+    margin: 3px 2px 2px 2px;
+    padding: 10px;
+    width: 100%;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    color: var(--text-color);
+    width: 400px;
+    border-collapse: separate;
+    border-spacing: 4px;
+}
+
+th, td {
+    background-color: var(--button-background-light);
+    padding: 8px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+th {
+    background-color: var(--button-background);
+    font-weight: bold;
+}
+
+.flex{
+    width: fit-content;
+    height: fit-content;
+}
+
+th.fixed, td.fixed {
+    width: 9ch;
+    max-width: 9ch;
+}
+
+button {
+    border: none;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.button{
+    margin: 3px;
+    align-self: center;
+    border: none;
+    border-radius: 1.5vw;
+    background-color: var(--button-background);
+    height: 30px;
+    width: 100%;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.button:hover
+{
+    background-color: var(--button-background-hover);
+}
+
+.button:active
+{
+    background-color: var(--button-background-active);
+}
+
+.hbox{
+    display:flex;
+    flex-direction: row;
+}

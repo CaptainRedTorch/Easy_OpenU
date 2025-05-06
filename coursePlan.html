@@ -1,0 +1,36 @@
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylePlan.css">
+    <title>Courses planner</title>
+</head>
+<body>
+<div class="hbox">
+    <button class="button" id="back"><i class="fa fa-chevron-left"></i></button>
+    <button class="button" id="save">שמירה</button>
+    <button class="button" id="export">שמירה לקובץ</i></button>
+    <button class="button" id="clear">מחק הכל</button>
+</div>
+<table id="courseTable">
+    <thead>
+    <tr>
+        <th class="small" id="totalPoints">נז</th>
+        <th>שם קורס</th>
+        <th class="fixed">מספר</th>
+        <th class="fixed">סמסטר</th>
+        <th class="extra-small"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Rows will be dynamically added here -->
+    </tbody>
+</table>
+<div class="center">
+    <button id="addRow"><i class="fa fa-plus"></i></button>
+</div>
+<script src="coursePlan.js"></script>
+<script src="fetch_Script.js"></script>
+<script src="navigation.js"></script>
+</body>
+</html>

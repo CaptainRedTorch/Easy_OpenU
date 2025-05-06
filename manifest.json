@@ -1,0 +1,46 @@
+{
+  "name": "EasyU",
+  "description": "All in one easy access to essential open university site features",
+  "version": "1.2.2",
+  "manifest_version": 3,
+  "icons": {
+    "16": "easyicon_16.png",
+    "32": "easyicon_32.png",
+    "48": "easyicon_48.png",
+    "128": "easyicon_small.png"
+  },
+  "action": {
+    "default_popup": "page.html",
+    "default_icon": "easyicon.png"
+  },
+  "host_permissions": [
+    "https://opal.openu.ac.il/*",
+    "https://sheilta.apps.openu.ac.il/*",
+    "https://*.openu.ac.il/*"
+  ],
+  "background": {
+    "service_worker": "notificationsHandler.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://sso.apps.openu.ac.il/*"],
+      "js": ["content.js"],
+      "all_frames": true
+    },
+    {
+      "matches": ["https://sheilta.apps.openu.ac.il/pls/dmyopt2/*"],
+      "js": ["calendar.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["styleCalendar.css","icons/*.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "notifications",
+    "alarms"
+  ]
+}
