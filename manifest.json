@@ -9,6 +9,11 @@
     "48": "easyicon_48.png",
     "128": "easyicon_small.png"
   },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "henbendor7@gmail.com"
+    }
+  },
   "action": {
     "default_popup": "page.html",
     "default_icon": "easyicon.png"
@@ -19,7 +24,8 @@
     "https://*.openu.ac.il/*"
   ],
   "background": {
-    "service_worker": "notificationsHandler.js"
+    "service_worker": "notificationsHandler.js",
+    "scripts": ["notificationsHandler.js"]
   },
   "content_scripts": [
     {
