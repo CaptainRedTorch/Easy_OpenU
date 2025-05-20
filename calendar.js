@@ -3,12 +3,14 @@ let viewedDay = new Date().getDate();
 let viewedYear = new Date().getFullYear();
 let selectedButton;
 
+const storage = chrome?.storage?.local || browser?.storage?.local;
+
 window.addEventListener('load', () => {
     checkThanChange();
 });
 
 function checkThanChange() {
-    chrome.storage.local.get("calendarSwitch", calendarSwitch => {
+    storage.local.get("calendarSwitch", calendarSwitch => {
         if (!calendarSwitch.calendarSwitch) {
             setTimeout(changeCalendar, 100);
         }

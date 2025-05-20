@@ -1,3 +1,4 @@
+const storage = chrome?.storage?.local || browser?.storage?.local;
 //wait for load page
 window.addEventListener('load', () => {
     console.log("Script running in:", window.location.origin);
@@ -8,7 +9,7 @@ window.addEventListener('load', () => {
         if (studentIdField) {
             console.log("Student ID field found, autofilling...");
 
-            chrome.storage.local.get("studentID", (result) => {
+            storage.local.get("studentID", (result) => {
                 if (result.studentID) {
                     studentIdField.value = result.studentID;
                     console.log("Autofilled Student ID:", result.studentID);
