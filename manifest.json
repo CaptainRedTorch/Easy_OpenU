@@ -9,11 +9,6 @@
     "48": "/icons/easyicon_48.png",
     "128": "/icons/easyicon_small.png"
   },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "henbendor7@gmail.com"
-    }
-  },
   "action": {
     "default_popup": "/html/page.html",
     "default_icon": "/icons/easyicon.png"
