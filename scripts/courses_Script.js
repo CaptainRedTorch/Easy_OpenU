@@ -45,16 +45,22 @@ async function fetchCourses() {
             const doc = await parser.parseFromString(html, "text/html");
             const courses = [];
 
-
-
-            const courseLinks = doc.querySelectorAll('li.position-relative.mycourselink.opal:not(.submenu .mycourselink)');
+            const courseLinks = doc.querySelectorAll('li.position-relative.mycourselink.opal');
             console.log(courseLinks);
+            let currentSemester = null;
+            let previousSemester = null;
             courseLinks.forEach(element => {
                 const courseName = element.querySelector(".text-wrapper span")?.textContent.trim().replace(/\s*\(.*?\)\s*/g, "");
                 const courseUrl = element.querySelector("a")?.getAttribute('href');
+                const semester = element.querySelector(".text-wrapper span")?.textContent.match(/\([0-9]{4}.?\)/g).toString();
 
-                if (courseName && courseUrl) {
-                    courses.push({name: courseName, courseUrl: courseUrl, booklet: null, book: null});
+                if (currentSemester === null) {
+                    currentSemester = semester;
+                    previousSemester = getPreviousSemester(currentSemester);
+                }
+
+                if (courseName && courseUrl && semester && (semester === currentSemester || semester === previousSemester)) {
+                    courses.push({name: courseName, courseUrl: courseUrl, booklet: null, book: null, semester: semester});
                 }
             });
             chrome.storage.local.set({courses: courses, hasLoaded: false}, () => {
@@ -67,6 +73,7 @@ async function fetchCourses() {
         console.error("Error fetching courses:", error);
     }
 }
+
 
 async function fetchCourseData(courses) {
 
@@ -174,5 +181,26 @@ async function waitForLoaded() {
             }
         }, 50); // Check every 50ms
     });
+}
+
+function getPreviousSemester(currentSemester) {
+    const SEMESTER_LETTERS = ['א', 'ב', 'ג']
+    const letter = currentSemester.match(/[א-ג]/g).toString()
+    const letterIndex = SEMESTER_LETTERS.indexOf(letter)
+    console.log(letter)
+    const year = +currentSemester.match(/[0-9]{4}/g).toString()
+
+    if (letterIndex > 0) {
+        const previousLetter = SEMESTER_LETTERS[letterIndex - 1]
+        console.log(`(${year}${previousLetter})`)
+        return `(${year}${previousLetter})`
+    }
+    else{
+        const previousYear = year - 1;
+        const previousLetter = SEMESTER_LETTERS[SEMESTER_LETTERS.length - 1];
+        console.log(`(${previousYear}${previousLetter})`)
+        return `(${previousYear}${previousLetter})`
+
+    }
 }
 

@@ -28,13 +28,13 @@ function addRow(e,point, courseName, index, semester, fromSave) {
     row.addEventListener("dragover", dragOver);
     row.addEventListener("drop", drop);
 
-    // Editable semester year
+    // Editable semester points
     createEditableCell(row, row.insertCell(0), point);
 
     // Editable course name
     createEditableCell(row, row.insertCell(1), courseName);
 
-    // Editable semester period
+    // Editable semester index
     createEditableCell(row, row.insertCell(2), index);
 
     // Editable semester period

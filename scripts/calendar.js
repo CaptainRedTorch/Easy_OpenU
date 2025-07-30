@@ -74,7 +74,7 @@ function injectCSS(fileUrl, location) {
 
 function replaceCSS(style) {
     if (style) {
-        injectCSS(chrome.runtime.getURL("styleCalendar.css"), style.parentElement);
+        injectCSS(chrome.runtime.getURL("/css/styleCalendar.css"), style.parentElement);
     }
 }
 

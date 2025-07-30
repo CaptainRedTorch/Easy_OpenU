@@ -53,9 +53,7 @@ courseInfoField.addEventListener('blur', async () => {
 
 async function saveCourseInfo() {
     const link = courseInfoField.value.trim();
-    //if (link) {
-        chrome.storage.local.set({ courseInfoLink: link });
-    //}
+    chrome.storage.local.set({ courseInfoLink: link });
 }
 
 document.getElementById("deleteButton").addEventListener('click', (e) => {
