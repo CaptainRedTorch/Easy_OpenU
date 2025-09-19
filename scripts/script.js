@@ -2,7 +2,7 @@
 const assignmentSiteURL = "https://sheilta.apps.openu.ac.il/pls/mtl/student.login";
 const sheiltaURL = "https://sheilta.apps.openu.ac.il/pls/dmyopt2/myop.myop_screen";
 const calendarURL = "https://sheilta.apps.openu.ac.il/pls/dmyopt2/LUACH_SHANA.first?user_type=1";
-const defaultMegaURL = "https://mega.nz/folder/Ibl2CSIY#em77k1KkiqhFsQKXZkHdGw";
+const defaultMegaURL = "https://mega.nz/folder/bZgRnQbJ#fBIkzvx7nLDUFMqGad6jOw/folder/WZgwwIaY";
 const defaultCourseInfoURL = "https://academic.openu.ac.il/cs/computer/program/AF.aspx";
 
 document.getElementById("getGrades").addEventListener('click', (e) => {
