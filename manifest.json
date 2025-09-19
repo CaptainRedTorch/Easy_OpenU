@@ -31,6 +31,10 @@
     {
       "matches": ["https://sheilta.apps.openu.ac.il/pls/dmyopt2/*"],
       "js": ["/scripts/calendar.js"]
+    },
+    {
+      "matches": ["https://sheilta.apps.openu.ac.il/pls/dmyopt2/course_info.courses*"],
+      "js": ["/scripts/courseFilter.js"]
     }
   ],
   "web_accessible_resources": [
