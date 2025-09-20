@@ -19,8 +19,7 @@
     "https://*.openu.ac.il/*"
   ],
   "background": {
-    "service_worker": "/scripts/notificationsHandler.js",
-    "scripts": ["/scripts/notificationsHandler.js"]
+    "service_worker": "/scripts/notificationsHandler.js"
   },
   "content_scripts": [
     {
@@ -39,7 +38,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["/css/styleCalendar.css","icons/*.png"],
+      "resources": ["/css/styleCalendar.css", "icons/*.png"],
       "matches": ["<all_urls>"]
     }
   ],
