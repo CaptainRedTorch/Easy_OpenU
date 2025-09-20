@@ -29,7 +29,7 @@
       "all_frames": true
     },
     {
-      "matches": ["https://sheilta.apps.openu.ac.il/pls/dmyopt2/*"],
+      "matches": ["https://sheilta.apps.openu.ac.il/pls/dmyopt2/LUACH_SHANA*"],
       "js": ["/scripts/calendar.js"]
     },
     {

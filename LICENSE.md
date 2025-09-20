@@ -14,7 +14,7 @@ Permission is granted to any individual to:
 
 - You must credit the original author, CaptainRedTorch, in any derivative work.
 - You may not sell, rent, or otherwise profit—directly or indirectly—from this code or any derivative of it.
-- You may not publicly redistribute or publish modified or unmodified versions of this code without explicit permission.
+- You may not publicly redistribute or publish modified or unmodified versions of this code without **explicit permission**.
 
 Violation of these terms may result in legal action.
 

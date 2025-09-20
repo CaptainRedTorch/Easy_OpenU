@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
             chrome.storage.local.get("studentID", (result) => {
                 if (result.studentID) {
                     studentIdField.value = result.studentID;
-                    console.log("Autofilled Student ID:", result.studentID);
+                    console.log("Autofilled Student ID");
                 } else {
                     console.warn("No student ID found in storage");
                 }
