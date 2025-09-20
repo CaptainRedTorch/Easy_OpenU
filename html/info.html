@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/styles.css">
     <title>Info</title>
 </head>
-<body>
+<body style="min-width: 290px;">
 <div class="hbox">
     <button class="button" id="back"><i class="fa fa-chevron-left"></i></button>
     <a class="button" id="bug-button"
@@ -17,19 +17,25 @@
     </a>
     <button class="button" id="settings"><i class="fa fa-cog"></i></button>
 </div>
-<div class="container" id="info-container">
-    <img id="logo-me" src="/icons/logoMe.png">
-    <label>by Hen Ben-Dor</label>
-    <a href="https://captainredtorch.github.io/" title="github profile" style="text-decoration:none"
-       target="_blank">Check out my other projects</a>
-
-    <br>
-    <label>?נתקלת בבעיה</label>
-    <label>כניסה למשתמש האוניברסיטה ורענון הפיצ'ר שלא עובד לרוב מתקן את הבעיה</label>
-    <br>
-    <label>אהבתם את התוסף? דרגו אותו בחנות</label>
-    <a href="https://www.flaticon.com" title="flaticon attribute" style="text-decoration:none" target="_blank">
-        <small>Icons created by Smashicons - Flaticon</small></a>
+<div id="info-container" style="display: flex; justify-content: space-between">
+    <div class="container" style="text-align: left; padding: 5px; min-width:90px">
+        <img id="logo-me" src="/icons/logoMe.png">
+        <label>by Hen Ben-Dor</label>
+        <a href="https://captainredtorch.github.io/" title="github profile" style="text-decoration:none; "
+           target="_blank">Check out my other projects</a>
+    </div>
+    <div class="container" style="text-align: right; padding: 5px">
+        <label>?נתקלת בבעיה</label>
+        <label>כניסה למשתמש האוניברסיטה ורענון הפיצ'ר שלא עובד לרוב מתקן את הבעיה</label>
+        <br>
+        <a href="https://github.com/CaptainRedTorch/Easy_OpenU/graphs/contributors" title="contributors" style="text-decoration:none; "
+           target="_blank">רשימת תורמי קוד</a>
+        <br>
+        <label>אהבתם את התוסף? דרגו אותו בחנות ותפיצו בוואטסאפ</label>
+        <br>
+        <a href="https://www.flaticon.com" title="flaticon attribute" style="text-decoration:none" target="_blank">
+            <small>Icons created by Smashicons - Flaticon</small></a>
+    </div>
 </div>
 <script src="/scripts/navigation.js"></script>
 </body>

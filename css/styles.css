@@ -79,7 +79,7 @@ body {
 }
 
 #deleteButton {
-    margin: 8px 0 0 0;
+    margin: 8px 0 8px 0;
     background-color: var(--button-delete);
     color: white;
     font-size: 16px;
@@ -89,15 +89,13 @@ body {
 
 #info-container {
     margin: 8px 0 0 0;
-    padding: 0 0 10px 0;
-    text-align: center;
+    padding: 0 5px 10px 5px;
 }
 
 #logo-me {
-    width: 40%;
-    height: 35%;
-    margin: auto;
-    display: block;
+    width: 70px;
+    height: 65px;
+
 }
 
 
@@ -241,6 +239,10 @@ body {
     }
 }
 
+.checkbox input{
+    outline: #0e4fcb;
+}
+
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -307,9 +309,10 @@ input:checked + .slider:before {
 .switch-container {
     display: flex;
     vertical-align: center;
-    margin: 3px 2px 2px 2px;
+    justify-content: space-between;
+    margin: 3px 2px 3px 2px;
     background-color: var(--button-background);
     border-radius: 2.5vh;
-    padding: 10px;
+    padding: 5px 11% 5px 11%;
     color: var(--text-color);
 }
