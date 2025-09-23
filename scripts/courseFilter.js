@@ -6,6 +6,7 @@ const blockedStatuses = [
 	"מבוטל", // Cancelled
 	"הוחלף", // Replaced
 	"נדחה", // Postponed
+	"הועבר", // transferred
 ];
 
 let toggle = true
