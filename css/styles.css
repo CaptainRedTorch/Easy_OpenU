@@ -51,19 +51,20 @@ body {
     align-items: center;
     direction: rtl;
     padding: 5px 10px 10px 10px;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: bold;
     display: flex;
     flex-direction: column;
     border-radius: 2.5vh;
     background-color: var(--button-background);
     color: var(--text-color);
-    font-weight: bold;
+
 }
 
 .input-box {
     text-align: center;
     border: none;
-    width: 80%;
+    width: 90%;
     background-color: #ebf1ff;
     margin: 5px 0 0 0;
     padding: 3px;
@@ -239,7 +240,7 @@ body {
     }
 }
 
-.checkbox input{
+.checkbox input {
     outline: #0e4fcb;
 }
 
@@ -313,6 +314,6 @@ input:checked + .slider:before {
     margin: 3px 2px 3px 2px;
     background-color: var(--button-background);
     border-radius: 2.5vh;
-    padding: 5px 11% 5px 11%;
+    padding: 5px 7% 5px 7%;
     color: var(--text-color);
 }
