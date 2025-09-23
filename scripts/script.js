@@ -10,7 +10,7 @@ document.getElementById("getGrades").addEventListener('click', (e) => {
 });
 
 document.getElementById("getAssignment").addEventListener('click', (e) => {
-    chrome.tabs.create({url: assignmentSiteURL});
+    chrome.tabs.create({ url: assignmentSiteURL });
 })
 
 document.getElementById("getCourses").addEventListener('click', (e) => {
@@ -18,23 +18,30 @@ document.getElementById("getCourses").addEventListener('click', (e) => {
 });
 
 document.getElementById("getSheilta").addEventListener('click', (e) => {
-    chrome.tabs.create({url: sheiltaURL});
+    chrome.tabs.create({ url: sheiltaURL });
 });
 
 document.getElementById("getCalendar").addEventListener('click', (e) => {
-    chrome.tabs.create({url: calendarURL});
+    chrome.tabs.create({ url: calendarURL });
 });
 
+// Open Materials Link or default Mega link if not set in settings
 document.getElementById("getMega").addEventListener('click', (e) => {
-    chrome.tabs.create({url: defaultMegaURL});
+    chrome.storage.local.get("materialsLink", materialsURL => {
+        if (materialsURL.materialsLink && materialsURL.materialsLink.length > 10) {
+            chrome.tabs.create({ url: materialsURL.materialsLink });
+        } else
+            chrome.tabs.create({ url: defaultMegaURL });
+    });
 });
 
+// Open Course Info Link or default Course Info link if not set in settings
 document.getElementById("getCourse").addEventListener('click', (e) => {
     chrome.storage.local.get("courseInfoLink", courseInfoURL => {
         if (courseInfoURL.courseInfoLink && courseInfoURL.courseInfoLink.length > 10) {
-            chrome.tabs.create({url: courseInfoURL.courseInfoLink});
+            chrome.tabs.create({ url: courseInfoURL.courseInfoLink });
         } else
-            chrome.tabs.create({url: defaultCourseInfoURL});
+            chrome.tabs.create({ url: defaultCourseInfoURL });
 
     });
 });
