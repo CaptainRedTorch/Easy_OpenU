@@ -340,7 +340,7 @@ function changeIcons(mainTable) {
             setImgSize(img);
         } else if (attribute === "ממח") {
             img.setAttribute("src", chrome.runtime.getURL("icons/mmn.png"));
-            img.setAttribute("style", "filter: hue-rotate(90deg);");
+            img.style.filter = "hue-rotate(90deg)";
             setImgSize(img);
         } else if (attribute === "חגים ומועדים") {
             img.setAttribute("src", chrome.runtime.getURL("icons/holidays.png"));
