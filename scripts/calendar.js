@@ -384,7 +384,7 @@ function adjustCells(rows, navTable) {
                             changeTitle(img, attribute);
                         } else if (attribute === "ממח") {
                             rows[i].cells[j].classList.add("mmh-cell");
-                            changeTitle(img, attribute);
+                            changeTitle(img, "ממן");
                         } else if (attribute === "חגים ומועדים") {
                             rows[i].cells[j].classList.add("holiday-cell");
                             changeTitle(img, attribute);
