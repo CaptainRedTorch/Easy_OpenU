@@ -322,6 +322,8 @@ input:checked + .slider:before {
 .semester-header {
     overflow: hidden;
     text-align: center;
+    margin: 3px;
+    color: var(--text-color);
 }
 
 .semester-header > span {
@@ -336,6 +338,7 @@ input:checked + .slider:before {
     border-bottom: 2px solid;
     width: 100vw;
     margin: 0 20px;
+    color: var(--text-color);
 }
 .semester-header > span:before {
     right: 100%;
