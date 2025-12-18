@@ -10,6 +10,7 @@
     --button-background-active: #abc0f5;
     --background-inactive-day: #c9d5e8;
     --mmn-color: #ffdbaf;
+    --mmh-color: #62bc7555;
     --exam-color: #ffb8e3;
     --course-color: #c6d5fa;
     --holiday-cell: #ded1ff;
@@ -88,6 +89,10 @@ font {
 
 .mmn-cell {
     background-color: var(--mmn-color);
+}
+
+.mmh-cell {
+    background-color: var(--mmh-color);
 }
 
 button.time {
