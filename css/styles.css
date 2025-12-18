@@ -112,6 +112,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1rem;
 }
 
 .grid-button {
@@ -316,4 +317,29 @@ input:checked + .slider:before {
     border-radius: 2.5vh;
     padding: 5px 7% 5px 7%;
     color: var(--text-color);
+}
+
+.semester-header {
+    overflow: hidden;
+    text-align: center;
+}
+
+.semester-header > span {
+    position: relative;
+    display: inline-block;
+}
+
+.semester-header > span:before, .semester-header > span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    border-bottom: 2px solid;
+    width: 100vw;
+    margin: 0 20px;
+}
+.semester-header > span:before {
+    right: 100%;
+}
+.semester-header > span:after {
+    left: 100%;
 }

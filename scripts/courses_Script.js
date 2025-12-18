@@ -125,8 +125,19 @@ async function load() {
     const {courses} = await chrome.storage.local.get("courses");
     if (!courses) return;
     console.log("loaded " + courses.length + " courses books");
+    let currentSemester = "";
+    
     courses.forEach((course) => {
-
+        if (currentSemester !== formatSemesterName(course.semester)) {
+            const semesterHeader = document.createElement("h3");
+            semesterHeader.classList.add("semester-header");
+            const span = document.createElement("span");
+            span.textContent = formatSemesterName(course.semester);
+            semesterHeader.appendChild(span);
+            container.appendChild(semesterHeader);
+            currentSemester = formatSemesterName(course.semester);
+        }
+        
         const hContainer = document.createElement("div");
         hContainer.style.display = "flex";
         hContainer.style.flexDirection = "row";
@@ -204,3 +215,7 @@ function getPreviousSemester(currentSemester) {
     }
 }
 
+// Takes a semester string like "(2023א)" and returns "2023א"
+function formatSemesterName(semester) {
+    return semester.replace(/[()]/g, '');
+}
