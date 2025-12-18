@@ -338,6 +338,10 @@ function changeIcons(mainTable) {
         } else if (attribute === "ממן") {
             img.setAttribute("src", chrome.runtime.getURL("icons/mmn.png"));
             setImgSize(img);
+        } else if (attribute === "ממח") {
+            img.setAttribute("src", chrome.runtime.getURL("icons/mmn.png"));
+            img.setAttribute("style", "filter: hue-rotate(90deg);");
+            setImgSize(img);
         } else if (attribute === "חגים ומועדים") {
             img.setAttribute("src", chrome.runtime.getURL("icons/holidays.png"));
             setImgSize(img);
@@ -377,6 +381,9 @@ function adjustCells(rows, navTable) {
                             changeTitle(img, attribute);
                         } else if (attribute === "ממן") {
                             rows[i].cells[j].classList.add("mmn-cell");
+                            changeTitle(img, attribute);
+                        } else if (attribute === "ממח") {
+                            rows[i].cells[j].classList.add("mmh-cell");
                             changeTitle(img, attribute);
                         } else if (attribute === "חגים ומועדים") {
                             rows[i].cells[j].classList.add("holiday-cell");
