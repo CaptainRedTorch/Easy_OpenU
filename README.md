@@ -4,6 +4,8 @@ A Chrome extension that gives Open University students lightning-fast access to 
 
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/v/fnngffcjbcgnecomoaedkcagihkldebf.svg)](https://chromewebstore.google.com/detail/easyu/fnngffcjbcgnecomoaedkcagihkldebf)
 
+<img width="300" height="291" alt="image" src="https://github.com/user-attachments/assets/0e2c415c-fc51-4d33-b3df-b13be540819c" />
+
 ---
 
 ## Contributions are welcome! 
