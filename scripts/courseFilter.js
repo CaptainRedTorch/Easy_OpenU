@@ -11,7 +11,7 @@ const blockedStatuses = [
 
 let toggle = true
 
-async function filterCourses(toggle) {
+async function filterCourses(isVisible) {
 // Go through each row
 	rows.forEach((row) => {
 		const statusCell = row.cells[3]; // 4th column contains the status
@@ -21,11 +21,7 @@ async function filterCourses(toggle) {
 
 		// Status is in blocked list → remove row
 		if (blockedStatuses.some((status) => statusText.includes(status))) {
-			if (toggle)
-				row.style.display = "none";
-			else
-				row.style.display = "table-row";
-			return;
+			row.style.display = isVisible ? "none" : "table-row";
 		}
 	});
 }
@@ -54,4 +50,6 @@ toggleSwitch.addEventListener('click', (e) => {
 	filterCourses(toggle);
 })
 
+//fixing code not running on page load
+filterCourses(true);
 
